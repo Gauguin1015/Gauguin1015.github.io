@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "AAA";
+    src: url("Inter-Black.ttf") format("opentype");
+}
+@font-face {
+    font-family: "BBB";
+    src: url("Inter-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: "CCC";
+    src: url("AdobeHebrew-Bold.otf") format("opentype");
+}
+
+
+body {
+    margin: 0; padding: 0;
+ 
+}
+
+#header {
+    position: relative;
+    bottom:20px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color:  #F66C50; 
+}
+#logo {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    font-family: "AAA";
+    font-size: 90px;
+    color: #2C76CF;
+}
+#navmenu {
+    display: flex;
+    position: absolute;
+    bottom: 16px;
+    right: 80px;
+    padding-right: 10px;
+}
+#navmenu p {
+    margin: 0 40px;
+    font-family: "BBB";
+    font-size: 30px;
+
+}
+/* #navmenu 요소에 포함된 a 태그 스타일 설정 */
+#navmenu a {
+    color:  #2C76CF;
+}
+#navmenu a:link {
+    text-decoration: none;
+}
+#navmenu a:hover > p {
+    background-color:#FDF167;
+    outline: dashed 1px  #F66C50;
+    outline-offset: -2px;
+}
+
+#main-container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+    margin-top: 30px;
+    margin-bottom:40px;
+    /*background-color: bisque;*/
+}
+#title {
+    font-family: "BBB";
+    font-size: 35px;
+    /*background-color: aquamarine;*/
+    color: #2C76CF;
+}
+#description {
+    font-family: "CCC";
+    font-size: 25px;
+    line-height: 160%;
+    /*background-color: blanchedalmond;*/
+    color:#F66C50
+}
+
+#description1 {
+    font-family: "BBB";
+    font-size: 25px;
+    line-height: 150%;
+    /*background-color: blanchedalmond;*/
+    color:#F66C50
+}
+
+#picture {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.picture-item {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    margin: 0 9px;
+}
+.picture-item img {
+    width: 100%;
+}
+@media screen and (max-width: 1024px) {
+    #header {
+        height: 160px;
+    }
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #navmenu {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        justify-content: center;
+    }
+    #main-container {
+        width: 90%;
+    }
+    #title {
+        font-size: 24px;
+    }
+    .picture-item {
+       flex-basis: 40%;
+    }
+}

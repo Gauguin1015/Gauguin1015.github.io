@@ -15,7 +15,8 @@ body{
     margin: 0; padding: 0;
 }
 .container{
-height: 1100PX;
+position: relative;
+    height: 1100PX;
 padding-left: 30px;
 padding-right: 20px;
 }
@@ -24,20 +25,22 @@ a{
 }
 a:hover{text-decoration: underline;}
 header{
+    position:relative;
     background-color: #2C76CF;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 30px;
     font-size: 40px;
     font-family: "AAA";
-    width: 579px;
+    width: 50%;
+    left:50%;
     margin-top: 60px;
-    margin-left: 575px;
+    box-sizing: border-box; 
 }
 #logo {
     position:fixed;
-    top: 55px;
-    left: 80px;
+    top: 50px;
+    left: 230px;
     width: 480px;
     height: 100px;
     background-color:#FDF167;
@@ -57,7 +60,9 @@ header{
 }
 #text1{
         position: absolute;
-        left: 470px;
+        /*left: 470px;*/
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 80PX;
         top: 900px;
         color: #2C76CF;
@@ -71,13 +76,13 @@ header{
     flex-direction:row;
     align-items: end;
     position:absolute;
-    top: 10px;
+    top: -50px;
     right: 350px;
 }
 #navmenu p {
     margin: 0;
     margin-top: 10px;
-    padding: 0px 20px; 
+    padding: 0px 100px; 
     
     font-size: 24px;
     font-family: "BBB";
@@ -93,69 +98,72 @@ header{
     outline: dashed 3px  #F66C50;
     outline-offset: -3px;
 }
-section{
+
+#main{
     display: flex;
-    height: 375px;
-
+    /*height: 36.46vw;*/
+    height:700px;
 }
-
 
 #w1{
     position:relative;
-    flex:1.8;
+    width:50%;
     background-color: #2C76CF;
    /* background-image: url("배경1.png");*/
-    font-size: 40px;
-    font-family: "CCC";
+    font-size: 80px;
+    font-family: "CCC"; 
     color: #FDF167;
 
 }
 #w1 p{
 position:absolute;
-top:150px;
-right:80px;
+top:250px;
+right:75px;
 margin: 0; 
 padding: 0;
 
 }
 #w1 img{
-    height: 100%;
+   position:absolute;
+    width: 70%;
     margin-left: 30px;
     margin-top: 20px;
 }
 
 #w2{
-    flex:1;
-    line-height:30;
-    font-size: 25px;
+    position:relative;
+    width:25%;
+    font-size: 40px;
     font-family: "CCC";
     background-color: #F66C50;
     color:#2C76CF;
 }
 #w2 img{
-    height: 100%;
-    margin-bottom: 20px;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
 }
 #w2 p{
     position:absolute;
-    top:80px;
-    left:750px;
+    top: 100px;
+    left:50px;
     margin: 0; 
     padding: 0;
     
     }
 #w3{
-    flex:1;
+    position:relative;
+    width:25%;
     background-color: #FDF167;
-    font-size: 38px;
+    font-size: 80px;
     font-family: "CCC";
     color:#F66C50
     
 }
 #w3 p{
     position:absolute;
-    top:450px;
-    left:1050px;
+    bottom:100px;
+    right: 50px;
     margin: 0; 
     padding: 0;
     
@@ -163,8 +171,8 @@ padding: 0;
 
 
 #w3 img{
-    height: 63%;
-    margin-top: -10px;
+    width:90%;
+    padding-top: 100px;
     
 }
 footer{
@@ -176,6 +184,8 @@ footer{
     text-align: center;
     background-clip: padding-box;
     margin: 0 317px 10px 0;
+    width:75%;
+    box-sizing: border-box;
 }
 #picture {
     display: flex;
@@ -184,13 +194,31 @@ footer{
     margin-bottom: 100px;
     text-align: center;
 }
+.item-overlay {
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background-color:#F66C50;
+ opacity: 0;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s; /* css 속성값이 변하는 경우 애니메이션 처리 */
+   
+}
+.picture-item:hover .item-overlay {
+    opacity: 0.85;
+}
 .picture-item {
+    position:relative;
     flex-basis: 300px;
     flex-grow: 0;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
 
     margin: 0 9px;
      border: solid 1.5px #F66C50
