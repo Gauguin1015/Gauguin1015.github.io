@@ -47,6 +47,7 @@ header{
     opacity: 0.5;
     border-radius: 60%;
     border:5px solid #2C76CF;
+    z-index: 10000;
 }
 #logo > p {
     color: #2C76CF;
@@ -229,7 +230,7 @@ footer{
 .picture-item p {
     font-size: 20px;
     font-family:"BBB";
-    color: #2C76CF;
+    color:#FDF167;
 }
 #logo2 {
     position:relative;
@@ -250,4 +251,10 @@ footer{
     transform: translate(-50%, -50%);
     font-family: "CCC";
     font-size: 27px;
+}
+
+@media screen and (max-width: 1024px) {
+  #main{
+    display: none;
+  }
 }
