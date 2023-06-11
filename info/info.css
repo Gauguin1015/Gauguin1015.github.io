@@ -27,7 +27,7 @@ body {
 }
 #logo {
     position:fixed;
-    top: 50px;
+    top: 30px;
     left: 70px;
     font-family: "AAA";
     font-size: 90px;
@@ -131,13 +131,16 @@ body {
     font-size: 27px;
 }
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 450px) {
     #header {
         height: 160px;
     }
     #logo {
         left: 50%;
         transform: translateX(-50%);
+        top: 5px;
+        font-size: 60px;
     }
     #navmenu {
         left: 50%;
@@ -152,6 +155,73 @@ body {
         font-size: 24px;
     }
     .picture-item {
-       flex-basis: 40%;
+       flex-basis:25%;
     }
 }
+@media screen and (max-width: 540px) {
+    #header {
+        height: 160px;
+    }
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
+        font-size: 60px;
+    }
+    #navmenu {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        justify-content: center;
+    }
+    #main-container {
+        width: 90%;
+    }
+    #title {
+        font-size: 24px;
+    }
+    .picture-item {
+       flex-basis:25%;
+    }
+}
+
+
+@media screen and (max-width: 390px) {
+    #header {
+        height: 200px;
+        width: 100%;
+    }
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
+        font-size: 60px;
+    }
+    #navmenu {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        justify-content: center;
+    }
+    #main-container {
+        width: 90%;
+    }
+    #title {
+        font-size: 15px;
+    }
+    
+    #description1 {
+        font-size: 18px;
+    }
+
+    #description{
+        font-size: 22px;
+    }
+    .picture-item {
+       flex-basis:29%;
+       margin-left: 1px;
+
+    }
+}
+
+
