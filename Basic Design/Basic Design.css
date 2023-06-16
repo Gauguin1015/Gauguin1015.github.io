@@ -172,6 +172,12 @@ a {
         padding: 0;
         justify-content: center;
     }
+    #navmenu p {
+        margin: 0 40px;
+        font-family: "BBB";
+        font-size: 20px;
+    
+    }
     #main-container {
         width: 90%;
     }

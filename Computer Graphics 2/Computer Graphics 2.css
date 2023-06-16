@@ -178,6 +178,12 @@ header 영역 - 로고, 메인메뉴
         padding: 0;
         justify-content: center;
     }
+    #navmenu p {
+        margin: 0 40px;
+        font-family: "BBB";
+        font-size: 20px;
+    
+    }
     #main-container {
         width: 90%;
     }
@@ -200,7 +206,7 @@ header 영역 - 로고, 메인메뉴
         margin: 0;
         padding: 0;
         font-family: "CCC";
-        font-size: 15px;
+        font-size: 10px;
         color: #2C76CF;
     }
 }
