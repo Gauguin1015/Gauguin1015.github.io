@@ -94,7 +94,7 @@ header 영역 - 로고, 메인메뉴
     font-size: 80px;
     left: 50%;
     transform: translateX(-50%);
-    border-bottom: solid 8px #FDF167
+    border-bottom: solid 8px #F66C50
     /*background-color: blanchedalmond;*/
 }
 #main-text>P{
@@ -136,7 +136,7 @@ header 영역 - 로고, 메인메뉴
     padding: 0;
     margin-bottom: 16px;
     font-family: "CCC";
-    font-size: 50px;
+    font-size: 55px;
     color:#FDF167;
 }
 
@@ -200,7 +200,7 @@ header 영역 - 로고, 메인메뉴
     margin: 0;
     padding: 0;
     font-family: "CCC";
-    font-size: 12px;
+    font-size: 13px;
     color:#FDF167;
 }
 
@@ -221,7 +221,7 @@ header 영역 - 로고, 메인메뉴
         left: 50%;
         transform: translateX(-50%);
         top: -15px;
-        font-size: 30px;
+        font-size: 28px;
     }
     #main-text{
         font-size: 50px;
@@ -243,12 +243,13 @@ header 영역 - 로고, 메인메뉴
     #copyright {
         padding-top: 40px;
     }
+    
     .project-title {
         margin: 0;
         padding: 0;
         margin-bottom: 16px;
         font-family: "CCC";
-        font-size: 40px;
+        font-size: 35px;
         color:#FDF167;
     }
     
@@ -256,7 +257,7 @@ header 영역 - 로고, 메인메뉴
         margin: 0;
         padding: 0;
         font-family: "CCC";
-        font-size: 15px;
+        font-size: 12px;
         color:#FDF167;
     }
 
@@ -265,7 +266,7 @@ header 영역 - 로고, 메인메뉴
         padding: 0;
         margin-bottom: 16px;
         font-family: "CCC";
-        font-size: 50px;
+        font-size: 40px;
         color:#FDF167;
     }
 
@@ -276,4 +277,6 @@ header 영역 - 로고, 메인메뉴
         font-size: 12px;
         color:#FDF167;
     }
+
+
 }

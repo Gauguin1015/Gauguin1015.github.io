@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "AAA";
+    src: url("Inter-Black.ttf") format("opentype");
+}
+@font-face {
+    font-family: "BBB";
+    src: url("Inter-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: "CCC";
+    src: url("AdobeHebrew-Bold.otf") format("opentype");
+}
+
+html {
+    scroll-behavior: smooth; /* 스크롤 시 부드럽게 이동 */
+}
+body {
+    margin: 0; padding: 0;
+    font-family: "AAA";
+    /* background-color: rgb(163, 247, 219); */
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* -----------------------------------------------------------------------
+header 영역 - 로고, 메인메뉴
+----------------------------------------------------------------------- */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color:#F66C50;
+    z-index: 10000;
+}
+#logo2 {
+    position:fixed;
+    bottom: 16px;
+    left: 40px;
+    font-family: 'AAA';
+    color: #FDF167;
+    font-size: 36px;
+}
+
+#navmenu {
+    display: flex;
+    position: absolute;
+    bottom: 16px;
+    right: 80px;
+    padding-right: 10px;
+}
+#navmenu p {
+    margin: 0 40px;
+    font-family: "BBB";
+    font-size: 30px;
+
+}
+/* #navmenu 요소에 포함된 a 태그 스타일 설정 */
+#navmenu a {
+    color:#2C76CF;
+}
+#navmenu a:link {
+    text-decoration: none;
+}
+#navmenu a:hover > p {
+    background-color:#FDF167;
+    outline: dashed 1px  #F66C50;
+    outline-offset: -2px;
+}
+
+
+/* -----------------------------------------------------------------------
+본문 영역
+----------------------------------------------------------------------- */
+
+#main-container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+    padding-top: 200px;
+    padding-bottom: 60px;
+    /*background-color: bisque;*/
+}
+
+#main-text {
+    position: relative;
+    color:#2C76CF;
+    text-align: center;
+    font-family: "AAA";
+    font-size: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: solid 8px #F66C50;
+    /*background-color: blanchedalmond;*/
+}
+#main-text>P{
+    margin:0;
+    margin-bottom: 25px;
+}
+#projects {
+    position: relative;
+    width: 100%;
+    padding-top: 160px;
+}
+.project-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.project-container > img {
+    width: 100%;
+}
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#FDF167;
+    opacity: 0.0;
+    display: flex;
+    flex-direction: column; /* 아이템이 세로 방향으로 쌓이는 flexbox */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s; /* css 속성값이 변하는 경우 애니메이션 처리 */
+}
+.project-container:hover .project-overlay {
+    opacity: 0.85;
+}
+.project-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-family: "CCC";
+    font-size: 50px;
+    color:#2C76CF;
+}
+
+.project-description {
+    margin: 0;
+    padding: 0;
+    font-family: "CCC";
+
+    color: #2C76CF;
+}
+
+
+
+
+/* -----------------------------------------------------------------------
+미디어 쿼리(media query) - 반응형 웹 구현
+----------------------------------------------------------------------- */
+
+/* 사용자 화면의 뷰포트(viewport) 크기가 1024px보다 작은 경우(최대 1024px) 적용 */
+@media screen and (max-width: 1024px) {
+    #header {
+        height: 100px;
+    }
+    #logo2 {
+        /* 로고를 가운데로 이동 */
+        left: 50%;
+        transform: translateX(-50%);
+        top: -15px;
+        font-size: 30px;
+    }
+    #main-text{
+        font-size: 50px;
+    }
+    #navmenu {
+        /* 네비게이션 메뉴를 가운데로 이동 */
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 12px;
+        padding: 0;
+        justify-content: center;
+    }
+    #main-container {
+        width: 90%;
+    }
+    #projects {
+        padding-top: 80px;
+    }
+    #copyright {
+        padding-top: 40px;
+    }
+    .project-title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+        font-family: "CCC";
+        font-size: 40px;
+        color: #2C76CF;
+    }
+    
+    .project-description {
+        margin: 0;
+        padding: 0;
+        font-family: "CCC";
+        font-size: 15px;
+        color: #2C76CF;
+    }
+}
