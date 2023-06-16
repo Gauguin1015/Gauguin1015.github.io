@@ -178,6 +178,10 @@ a {
         font-size: 20px;
     
     }
+    .picture-item {
+        flex-basis: 350px;
+        
+    }
     #main-container {
         width: 90%;
     }
